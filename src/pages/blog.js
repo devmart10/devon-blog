@@ -15,28 +15,6 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
-        <section>
-          <h2>A place for quality content</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-            doloremque eligendi quisquam a nobis aut odio ea fugiat iste eum
-            saepe omnis sequi incidunt, suscipit dolorem, minus voluptatum
-            tempore? Officia deserunt cum, facilis dicta suscipit repellendus
-            corporis. Modi, nesciunt ipsa debitis consequatur temporibus nulla
-            voluptas totam natus quos perspiciatis minima.
-          </p>
-          <p>
-            View the project on{" "}
-            <a
-              href="http://github.com/devmart10/devon-blog"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-          </p>
-        </section>
-        <hr />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (

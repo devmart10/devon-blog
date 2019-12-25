@@ -22,7 +22,7 @@ class BlogPostTemplate extends React.Component {
           <header>
             <h1
               style={{
-                marginTop: rhythm(1),
+                marginTop: rhythm(2),
                 marginBottom: 0,
               }}
             >
@@ -32,7 +32,7 @@ class BlogPostTemplate extends React.Component {
               style={{
                 ...scale(-1 / 5),
                 display: `block`,
-                marginBottom: rhythm(1),
+                marginBottom: rhythm(2),
               }}
             >
               {post.frontmatter.date}
@@ -41,6 +41,7 @@ class BlogPostTemplate extends React.Component {
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr
             style={{
+              marginTop: rhythm(2),
               marginBottom: rhythm(1),
             }}
           />
