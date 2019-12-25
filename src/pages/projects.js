@@ -15,7 +15,6 @@ class ProjectsPage extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
-        <Bio />
         <section>
           <h1>Here's what I'm working on</h1>
           <a target="_blank" href="https://github.com/devmart10/">
@@ -25,6 +24,8 @@ class ProjectsPage extends React.Component {
           <p>Lorem ipsum dolor sit amet.</p>
           <p>Lorem ipsum dolor sit amet.</p>
         </section>
+        <hr />
+        <Bio />
       </Layout>
     )
   }
