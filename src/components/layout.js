@@ -10,6 +10,21 @@ const Layout = ({ location, title, children }) => {
     maxWidth: rhythm(24),
   }
 
+  let linkStyle = {
+    boxShadow: `none`,
+    textDecoration: `none`,
+    color: `white`,
+    marginLeft: rhythm(1),
+    ...scale(0.01),
+  }
+
+  let titleStyle = {
+    boxShadow: `none`,
+    textDecoration: `none`,
+    color: `white`,
+    marginRight: `auto`,
+  }
+
   let header = (
     <h3
       style={{
@@ -20,16 +35,24 @@ const Layout = ({ location, title, children }) => {
       }}
     >
       <div style={{ ...container }}>
-        <Link
+        <div
           style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `white`,
+            display: `flex`,
           }}
-          to={`/`}
         >
-          {title}
-        </Link>
+          <Link to={`/`} style={{ ...titleStyle }}>
+            {title}
+          </Link>
+          <Link to={`/blog`} style={{ ...linkStyle }}>
+            Blog
+          </Link>
+          <Link to={`/projects`} style={{ ...linkStyle }}>
+            Projects
+          </Link>
+          <Link to={`/about`} style={{ ...linkStyle }}>
+            About
+          </Link>
+        </div>
       </div>
     </h3>
   )
@@ -39,6 +62,7 @@ const Layout = ({ location, title, children }) => {
       style={{
         backgroundColor: `lightgrey`,
         padding: rhythm(1),
+        marginTop: rhythm(2),
       }}
     >
       <div style={{ ...container }}>
