@@ -38,6 +38,7 @@ const Layout = ({ location, title, children }) => {
         <div
           style={{
             display: `flex`,
+            alignItems: `center`,
           }}
         >
           <Link to={`/`} style={{ ...titleStyle }}>
@@ -76,7 +77,19 @@ const Layout = ({ location, title, children }) => {
   return (
     <div>
       <header>{header}</header>
-      <main style={{ ...container }}>{children}</main>
+      <main
+        style={{
+          padding: `0 ${rhythm(1)}`,
+        }}
+      >
+        <div
+          style={{
+            ...container,
+          }}
+        >
+          {children}
+        </div>
+      </main>
       <footer>{footer}</footer>
     </div>
   )
