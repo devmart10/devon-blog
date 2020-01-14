@@ -1,4 +1,5 @@
 import Typography from "typography"
+import colors from "../utils/colors"
 
 const MyTheme = {
   title: "MyTheme",
@@ -29,7 +30,7 @@ const MyTheme = {
     "Segoe UI Symbol",
   ],
   scaleRatio: 2.2,
-  bodyColor: "hsla(0,0%,0%,0.8)",
+  bodyColor: colors.bodyFontColor,
   headerWeight: 600,
   bodyWeight: "normal",
   boldWeight: 600,
@@ -58,7 +59,7 @@ MyTheme.overrideStyles = ({ rhythm }) => ({
     marginLeft: rhythm(1.25),
   },
   a: {
-    color: "#4078c0",
+    color: colors.linkColor,
     textDecoration: "none",
   },
   "a:hover,a:active": {
@@ -69,6 +70,9 @@ MyTheme.overrideStyles = ({ rhythm }) => ({
     marginRight: 0,
     marginLeft: 0,
     paddingLeft: rhythm(1 / 2),
+  },
+  body: {
+    backgroundColor: colors.darkGray,
   },
 })
 

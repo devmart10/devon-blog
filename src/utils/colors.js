@@ -1,7 +1,8 @@
 const colors = {
-  darkGray: `#000`,
-  mediumGray: `#222`,
-  bodyFontColor: `#ccc`,
+  darkGray: `#232323`,
+  mediumGray: `#2b2b2b`,
+  bodyFontColor: `#cccccc`,
+  linkColor: `#5dbeff`,
 }
 
 export default colors

@@ -2,12 +2,13 @@ import React from "react"
 import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
+import colors from "../utils/colors"
 
 const Layout = ({ location, title, children }) => {
   let container = {
     marginLeft: `auto`,
     marginRight: `auto`,
-    maxWidth: rhythm(24),
+    maxWidth: rhythm(34),
   }
 
   let linkStyle = {
@@ -30,8 +31,8 @@ const Layout = ({ location, title, children }) => {
       style={{
         fontFamily: `Montserrat, sans-serif`,
         marginTop: 0,
-        backgroundColor: `black`,
-        padding: rhythm(1),
+        backgroundColor: colors.mediumGray,
+        padding: rhythm(1 / 2),
       }}
     >
       <div style={{ ...container }}>
@@ -61,7 +62,7 @@ const Layout = ({ location, title, children }) => {
   let footer = (
     <div
       style={{
-        backgroundColor: `lightgrey`,
+        backgroundColor: colors.mediumGray,
         padding: rhythm(1),
         marginTop: rhythm(2),
       }}
@@ -79,12 +80,15 @@ const Layout = ({ location, title, children }) => {
       <header>{header}</header>
       <main
         style={{
-          padding: `0 ${rhythm(1)}`,
+          padding: rhythm(1),
         }}
       >
         <div
           style={{
             ...container,
+            backgroundColor: colors.mediumGray,
+            padding: rhythm(1),
+            borderRadius: rhythm(1 / 2),
           }}
         >
           {children}
