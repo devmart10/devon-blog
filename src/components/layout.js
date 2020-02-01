@@ -54,6 +54,9 @@ const Layout = ({ location, title, children }) => {
           <Link to={`/about`} style={{ ...linkStyle }}>
             About
           </Link>
+          <Link to={`/contact`} style={{ ...linkStyle }}>
+            Contact
+          </Link>
         </div>
       </div>
     </h3>
