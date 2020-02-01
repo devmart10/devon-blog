@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import Title from "../shared/components/Title"
+import Section from "../shared/components/Section"
 
 class AboutPage extends React.Component {
   render() {
@@ -16,7 +17,7 @@ class AboutPage extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="About" />
-        <section>
+        <Section>
           <Title>About</Title>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut minus
@@ -27,8 +28,8 @@ class AboutPage extends React.Component {
             molestiae laboriosam optio et. Officiis aliquam possimus dicta nam
             blanditiis natus accusamus tempora!
           </p>
-        </section>
-        <section>
+        </Section>
+        <Section>
           <Title>Resume</Title>
           <h2>Summary of Qualifications</h2>
           <p>
@@ -48,7 +49,7 @@ class AboutPage extends React.Component {
             nesciunt enim, molestias repellendus rerum sapiente consequatur modi
             corrupti laudantium quam quod consectetur.
           </p>
-        </section>
+        </Section>
       </Layout>
     )
   }

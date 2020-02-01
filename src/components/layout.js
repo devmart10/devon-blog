@@ -86,9 +86,6 @@ const Layout = ({ location, title, children }) => {
         <div
           style={{
             ...container,
-            backgroundColor: colors.mediumGray,
-            padding: rhythm(1),
-            borderRadius: rhythm(1 / 2),
           }}
         >
           {children}
