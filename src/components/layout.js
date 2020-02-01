@@ -54,6 +54,9 @@ const Layout = ({ location, title, children }) => {
           <Link to={`/about`} style={{ ...linkStyle }}>
             About
           </Link>
+          <Link to={`/contact`} style={{ ...linkStyle }}>
+            Contact
+          </Link>
         </div>
       </div>
     </h3>
@@ -63,20 +66,18 @@ const Layout = ({ location, title, children }) => {
     <div
       style={{
         backgroundColor: colors.mediumGray,
-        padding: rhythm(1),
+        padding: rhythm(1 / 4),
         marginTop: rhythm(2),
       }}
     >
-      <div style={{ ...container }}>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+      <div style={{ textAlign: "center" }}>
+        © {new Date().getFullYear()} Devon Martin
       </div>
     </div>
   )
 
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
       <header>{header}</header>
       <main
         style={{
@@ -86,15 +87,12 @@ const Layout = ({ location, title, children }) => {
         <div
           style={{
             ...container,
-            backgroundColor: colors.mediumGray,
-            padding: rhythm(1),
-            borderRadius: rhythm(1 / 2),
           }}
         >
           {children}
         </div>
       </main>
-      <footer>{footer}</footer>
+      <footer style={{ marginTop: "auto" }}>{footer}</footer>
     </div>
   )
 }
