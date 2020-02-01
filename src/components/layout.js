@@ -74,7 +74,7 @@ const Layout = ({ location, title, children }) => {
   )
 
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
       <header>{header}</header>
       <main
         style={{
@@ -89,7 +89,7 @@ const Layout = ({ location, title, children }) => {
           {children}
         </div>
       </main>
-      <footer>{footer}</footer>
+      <footer style={{ marginTop: "auto" }}>{footer}</footer>
     </div>
   )
 }
