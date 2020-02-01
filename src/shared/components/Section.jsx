@@ -4,7 +4,7 @@ import { rhythm } from "../../utils/typography"
 
 const Section = ({ children }) => {
   return (
-    <div
+    <section
       style={{
         backgroundColor: colors.mediumGray,
         padding: rhythm(1),
@@ -13,7 +13,7 @@ const Section = ({ children }) => {
       }}
     >
       {children}
-    </div>
+    </section>
   )
 }
 
