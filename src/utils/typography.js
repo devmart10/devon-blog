@@ -6,6 +6,7 @@ const MyTheme = {
   baseFontSize: "16px",
   baseLineHeight: 1.625,
   headerFontFamily: [
+    "Montserrat",
     "-apple-system",
     "BlinkMacSystemFont",
     "Segoe UI",
@@ -29,9 +30,9 @@ const MyTheme = {
     "Segoe UI Emoji",
     "Segoe UI Symbol",
   ],
-  scaleRatio: 2.2,
+  scaleRatio: 2.5,
   bodyColor: colors.bodyFontColor,
-  headerWeight: 600,
+  headerWeight: 400,
   bodyWeight: "normal",
   boldWeight: 600,
 }
