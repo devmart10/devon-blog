@@ -63,14 +63,12 @@ const Layout = ({ location, title, children }) => {
     <div
       style={{
         backgroundColor: colors.mediumGray,
-        padding: rhythm(1),
+        padding: rhythm(1 / 4),
         marginTop: rhythm(2),
       }}
     >
-      <div style={{ ...container }}>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+      <div style={{ textAlign: "center" }}>
+        © {new Date().getFullYear()} Devon Martin
       </div>
     </div>
   )
