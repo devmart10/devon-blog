@@ -1,11 +1,10 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Title from "../shared/components/Title"
 import Section from "../shared/components/Section"
-import WorkExperience from "../shared/components/WorkExperience"
 
 import Prism from "prismjs"
 
@@ -22,29 +21,24 @@ const twitter = '@devmart10';
 const linkedin = 'devon.martin@linkedin.com';
 `.trim()
 
-class ContactPage extends React.Component {
-  componentDidMount() {
-    setTimeout(() => {
-      Prism.highlightAll()
-    }, 0)
-  }
+const ContactPage = ({ data, location }) => {
+  useEffect(() => {
+    Prism.highlightAll()
+  })
 
-  render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
+  const siteTitle = data.site.siteMetadata.title
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="About" />
-        <Section>
-          <Title>Contact</Title>
-          <pre className="language-javascript">
-            <code className="language-javascript">{code}</code>
-          </pre>
-        </Section>
-      </Layout>
-    )
-  }
+  return (
+    <Layout location={location} title={siteTitle}>
+      <SEO title="About" />
+      <Section>
+        <Title>Contact</Title>
+        <pre className="language-javascript">
+          <code className="language-javascript">{code}</code>
+        </pre>
+      </Section>
+    </Layout>
+  )
 }
 
 export default ContactPage
